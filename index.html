@@ -23,6 +23,12 @@
             }
         }
     </script>
+    
+    <style>
+        .reveal {
+            opacity: 0;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-900 text-gray-100 font-sans">
@@ -49,7 +55,7 @@
         class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-gray-800 min-h-[60vh] flex items-center justify-center">
         <div class="max-w-6xl mx-auto text-center">
 
-            <div class="mb-8 relative inline-block">
+            <div class="mb-8 relative inline-block reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                 <div class="absolute -inset-4 bg-primary opacity-30 blur-2xl rounded-3xl"></div>
 
                 <div class="relative w-40 h-40 rounded-3xl border-4 border-gray-700 shadow-xl overflow-hidden mx-auto">
@@ -57,14 +63,16 @@
                 </div>
             </div>
 
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-                Hi, I'm <span class="text-primary">Marco Benedictus Tirtaatmadja</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto">
-                A Web Developer aiming to build simple, beautiful experiences for websites.
-            </p>
+            <div class="reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-100">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
+                    Hi, I'm <span class="text-primary">Marco Benedictus Tirtaatmadja</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                    A Web Developer aiming to build simple, beautiful experiences for websites.
+                </p>
+            </div>
 
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <div class="flex flex-col sm:flex-row justify-center gap-4 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-200">
                 <a href="#connect"
                     class="px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-pink-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                     Let's Connect
@@ -80,7 +88,7 @@
     <section id="about" class="py-20 bg-gray-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="bg-gray-800 rounded-3xl p-8 md:p-12 shadow-xl border border-gray-700">
+            <div class="bg-gray-800 rounded-3xl p-8 md:p-12 shadow-xl border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl font-bold text-white mb-4">About Me</h2>
                     <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
@@ -106,7 +114,7 @@
 
         <section class="py-16 md:py-6">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
+                <div class="text-center mb-12 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                     <h2 class="text-3xl font-bold text-white mb-4">Highlights</h2>
                     <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
                 </div>
@@ -115,7 +123,7 @@
                 <div class="flex flex-wrap justify-center gap-8">
 
                     <div
-                        class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700">
+                        class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                         <img src="./images/gamesuite_openingscreen.png" alt="GameSuite Project Opening Screen"
                             class="aspect-video w-full object-cover">
                         <div class="p-6 flex-grow">
@@ -142,7 +150,7 @@
                     </div>
 
                     <div
-                        class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700">
+                        class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                         <img src="./images/Portfolio First Project.png" alt="Discord Bot"
                             class="aspect-video w-full object-cover">
                         <div class="p-6 flex-grow">
@@ -165,14 +173,14 @@
 
         <section class="py-16 md:py-16 bg-gray-900">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
+                <div class="text-center mb-12 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                     <h2 class="text-3xl font-bold text-white mb-4">Videos</h2>
                     <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
                 </div>
 
                 <div class="flex flex-wrap justify-center gap-8">
                     <div
-                        class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700">
+                        class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                         <div class="aspect-video w-full bg-black">
                             <iframe class="w-full h-full" src="https://youtube.com/embed/nAOw1PsY-oQ"
                                 title="YouTube video player" frameborder="0"
@@ -188,7 +196,7 @@
                     </div>
 
                     <div
-                        class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700">
+                        class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                         <div class="aspect-video w-full bg-black">
                             <iframe class="w-full h-full" src="https://www.youtube.com/embed/aUYiHjWk57M"
                                 title="YouTube video player" frameborder="0"
@@ -209,7 +217,7 @@
         <section class="pt-8 pb-8 md:pt-4 md:pb-16 bg-gray-900">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <div class="text-center mb-12">
+                <div class="text-center mb-12 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                     <h2 class="text-3xl font-bold text-white mb-4">Personal Projects</h2>
                     <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
                 </div>
@@ -217,7 +225,7 @@
                 <div class="flex flex-wrap justify-center gap-8 mb-16">
 
                     <div
-                        class="bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700">
+                        class="bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                         <img src="./images/Portfolio First Project.png" alt="First Portfolio"
                             class="aspect-video w-full object-cover">
                         <div class="p-6 flex-grow">
@@ -233,7 +241,7 @@
                     </div>
                 </div>
 
-                <div class="text-center mb-12">
+                <div class="text-center mb-12 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                     <h2 class="text-3xl font-bold text-white mb-4">Campus Projects</h2>
                     <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
                 </div>
@@ -241,7 +249,7 @@
                 <div class="flex flex-wrap justify-center gap-8">
 
                     <div
-                        class="bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700">
+                        class="bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                         <img src="./images/gamesuite_openingscreen.png" alt="GameSuite"
                             class="aspect-video w-full object-cover">
                         <div class="p-6 flex-grow">
@@ -261,7 +269,7 @@
                     </div>
 
                     <div
-                        class="bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700">
+                        class="bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                         <img src="./images/bilingosplash.png" alt="Bilingo" class="aspect-video w-full object-cover">
                         <div class="p-6 flex-grow">
                             <h3 class="text-lg font-bold text-white mb-2">Bilingo App</h3>
@@ -286,15 +294,16 @@
 
     <section id="connect" class="py-20 bg-gray-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                 <h2 class="text-3xl font-bold text-white mb-4">Connect With Me</h2>
+                <div class="w-16 h-1 bg-primary mx-auto rounded mb-4"></div>
                 <p class="text-gray-400">Find me on these platforms</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
 
                 <a href="https://linkedin.com/in/marcobenedictus" target="_blank"
-                    class="bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border-t-4 border-[#0077b5] group">
+                    class="bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border-t-4 border-[#0077b5] group reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                     <div class="flex flex-col items-center text-center">
                         <div
                             class="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mb-4 group-hover:bg-gray-600 transition-colors">
@@ -306,7 +315,7 @@
                 </a>
 
                 <a href="https://github.com/MarcoBenedictus" target="_blank"
-                    class="bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border-t-4 border-gray-400 group">
+                    class="bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border-t-4 border-gray-400 group reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                     <div class="flex flex-col items-center text-center">
                         <div
                             class="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mb-4 group-hover:bg-gray-600 transition-colors">
@@ -318,7 +327,7 @@
                 </a>
 
                 <a href="https://instagram.com/marcbenedicts" target="_blank"
-                    class="bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border-t-4 border-[#E1306C] group">
+                    class="bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border-t-4 border-[#E1306C] group reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                     <div class="flex flex-col items-center text-center">
                         <div
                             class="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mb-4 group-hover:bg-gray-600 transition-colors">
@@ -345,6 +354,34 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observerOptions = {
+                root: null,
+                // to self : edit for fade out animation when scrolling, this is the "safe zone" for the animation
+                rootMargin: '-100px 0px -100px 0px', 
+                threshold: 0.1
+            };
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // fadein
+                        entry.target.classList.remove("opacity-0", "translate-y-10", "scale-95");
+                        entry.target.classList.add("opacity-100", "translate-y-0", "scale-100");
+                    } else {
+                        // fadeout
+                        entry.target.classList.remove("opacity-100", "translate-y-0", "scale-100");
+                        entry.target.classList.add("opacity-0", "translate-y-10", "scale-95");
+                    }
+                });
+            }, observerOptions);
+    
+            const hiddenElements = document.querySelectorAll(".reveal");
+            hiddenElements.forEach((el) => observer.observe(el));
+        });
+    </script>
 
 </body>
 
