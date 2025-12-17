@@ -28,6 +28,17 @@
         .reveal {
             opacity: 0;
         }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .scrollbar-hide {
+            -ms-overflow-style: none; 
+            scrollbar-width: none;  
+        }
     </style>
 </head>
 
@@ -55,6 +66,7 @@
         class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-gray-800 min-h-[60vh] flex items-center justify-center">
         <div class="max-w-6xl mx-auto text-center">
 
+            <!-- Animated Image -->
             <div class="mb-8 relative inline-block reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                 <div class="absolute -inset-4 bg-primary opacity-30 blur-2xl rounded-3xl"></div>
 
@@ -63,6 +75,7 @@
                 </div>
             </div>
 
+            <!-- Animated Text -->
             <div class="reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-100">
                 <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
                     Hi, I'm <span class="text-primary">Marco Benedictus Tirtaatmadja</span>
@@ -72,6 +85,7 @@
                 </p>
             </div>
 
+            <!-- Animated Buttons -->
             <div class="flex flex-col sm:flex-row justify-center gap-4 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-200">
                 <a href="#connect"
                     class="px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-pink-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
@@ -88,6 +102,7 @@
     <section id="about" class="py-20 bg-gray-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
+            <!-- Animated About Card -->
             <div class="bg-gray-800 rounded-3xl p-8 md:p-12 shadow-xl border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl font-bold text-white mb-4">About Me</h2>
@@ -119,11 +134,11 @@
                     <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
                 </div>
 
-
-                <div class="flex flex-wrap justify-center gap-8">
+                <!-- Horizontal Scroll Container -->
+                <div class="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory px-4 scrollbar-hide md:justify-center">
 
                     <div
-                        class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
+                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                         <img src="./images/gamesuite_openingscreen.png" alt="GameSuite Project Opening Screen"
                             class="aspect-video w-full object-cover">
                         <div class="p-6 flex-grow">
@@ -150,7 +165,7 @@
                     </div>
 
                     <div
-                        class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
+                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                         <img src="./images/Portfolio First Project.png" alt="Discord Bot"
                             class="aspect-video w-full object-cover">
                         <div class="p-6 flex-grow">
@@ -178,9 +193,10 @@
                     <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-8">
+                <!-- Horizontal Scroll Container -->
+                <div class="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory px-4 scrollbar-hide md:justify-center">
                     <div
-                        class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
+                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                         <div class="aspect-video w-full bg-black">
                             <iframe class="w-full h-full" src="https://youtube.com/embed/nAOw1PsY-oQ"
                                 title="YouTube video player" frameborder="0"
@@ -196,7 +212,7 @@
                     </div>
 
                     <div
-                        class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
+                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                         <div class="aspect-video w-full bg-black">
                             <iframe class="w-full h-full" src="https://www.youtube.com/embed/aUYiHjWk57M"
                                 title="YouTube video player" frameborder="0"
@@ -222,10 +238,11 @@
                     <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-8 mb-16">
+                <!-- Horizontal Scroll Container -->
+                <div class="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory px-4 scrollbar-hide mb-16 md:justify-center">
 
                     <div
-                        class="bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
+                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                         <img src="./images/Portfolio First Project.png" alt="First Portfolio"
                             class="aspect-video w-full object-cover">
                         <div class="p-6 flex-grow">
@@ -246,10 +263,11 @@
                     <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-8">
+                <!-- Horizontal Scroll Container -->
+                <div class="flex overflow-x-auto gap-8 pb-2 snap-x snap-mandatory px-4 scrollbar-hide md:justify-center">
 
                     <div
-                        class="bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
+                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                         <img src="./images/gamesuite_openingscreen.png" alt="GameSuite"
                             class="aspect-video w-full object-cover">
                         <div class="p-6 flex-grow">
@@ -269,7 +287,7 @@
                     </div>
 
                     <div
-                        class="bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
+                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
                         <img src="./images/bilingosplash.png" alt="Bilingo" class="aspect-video w-full object-cover">
                         <div class="p-6 flex-grow">
                             <h3 class="text-lg font-bold text-white mb-2">Bilingo App</h3>
@@ -281,6 +299,25 @@
                         </div>
                         <div class="p-6 pt-0 flex justify-between text-sm">
                             <a href="https://github.com/MarcoBenedictus/Bilingo-Mobile-Prog-Mid-Terms/releases/tag/v1.0"
+                                target="_blank" class="text-primary hover:text-pink-400 font-medium">Download APK</a>
+                            <a href="https://youtube.com/shorts/aUYiHjWk57M" target="_blank"
+                                class="text-primary hover:text-pink-400 font-medium">Watch Video</a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
+                        <img src="./images/loomerangsplash.png" alt="Loomerang" class="aspect-video w-full object-cover">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-lg font-bold text-white mb-2">Loomerang</h3>
+                            <p class="text-gray-400 text-sm mb-3">A Mobile app for Mobile Programming Final Terms
+                            </p>
+                            <div class="bg-gray-700 p-2 rounded text-xs text-blue-300">
+                                <strong>Role:</strong> Fullstack Developer and Project Lead
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 flex justify-between text-sm">
+                            <a href="https://github.com/MarcoBenedictus/loomerang/releases/tag/1.0"
                                 target="_blank" class="text-primary hover:text-pink-400 font-medium">Download APK</a>
                             <a href="https://youtube.com/shorts/aUYiHjWk57M" target="_blank"
                                 class="text-primary hover:text-pink-400 font-medium">Watch Video</a>
