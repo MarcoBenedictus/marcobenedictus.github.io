@@ -2,423 +2,561 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./images/mdr.png">
-    <title>Marco Benedictus' Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./images/mdr.png">
+  <title>Marco Benedictus Tirtaatmadja | Portfolio</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Load Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#f871b5',
-                        secondary: '#475569',
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        .reveal {
-            opacity: 0;
-        }
+  <!-- Load Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
+  <!-- Link to your new custom stylesheet -->
+  <link rel="stylesheet" href="style.css">
 
-        /* Hide scrollbar for IE, Edge and Firefox */
-        .scrollbar-hide {
-            -ms-overflow-style: none; 
-            scrollbar-width: none;  
-        }
-    </style>
 </head>
 
-<body class="bg-gray-900 text-gray-100 font-sans">
+<body
+  class="bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-200 antialiased selection:bg-rose-500 selection:text-white">
 
-    <nav class="bg-gray-900 shadow-sm border-b border-gray-800 fixed w-full z-50 top-0">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="font-bold text-xl text-primary">Marco Benedictus</span>
-                </div>
-                <div class="hidden sm:flex space-x-8">
-                    <a href="#home" class="text-gray-300 hover:text-primary transition-colors">Home</a>
-                    <a href="#about" class="text-gray-300 hover:text-primary transition-colors">About</a>
-                    <a href="#connect" class="text-gray-300 hover:text-primary transition-colors">Contact</a>
-                </div>
-                <div class="sm:hidden text-gray-400">
-                    <i class="fas fa-bars text-xl"></i>
-                </div>
-            </div>
-        </div>
+  <!-- Animated Background Container -->
+  <div class="background-container pointer-events-none fixed inset-0 z-0 overflow-hidden">
+    <!-- CSS-animated blobs -->
+    <div class="blob blob-1 absolute bg-purple-600/30 w-96 h-96 rounded-full blur-3xl opacity-50 animate-pulse"></div>
+    <div class="blob blob-2 absolute right-0 top-1/2 bg-blue-600/30 w-80 h-80 rounded-full blur-3xl opacity-50"></div>
+    <div class="blob blob-3 absolute bottom-0 left-1/4 bg-pink-600/30 w-96 h-96 rounded-full blur-3xl opacity-50"></div>
+
+    <!-- container for JS-generated blocks -->
+    <div id="floating-blocks-container" class="absolute inset-0"></div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="py-8 relative z-20 backdrop-blur-sm bg-black/20 sticky top-0 border-b border-white/5">
+    <nav class="container mx-auto max-w-6xl px-6 flex justify-between items-center">
+      <!-- Logo/Name -->
+      <a href="#" class="text-xl font-bold text-white hover:text-rose-400 transition-colors">Marco Benedictus
+        Tirtaatmadja</a>
+
+      <!-- Nav Links -->
+      <div class="space-x-8 hidden md:flex">
+        <a href="#about" class="nav-link hover:text-rose-400 transition-colors">About</a>
+        <a href="#highlights" class="nav-link hover:text-rose-400 transition-colors">Highlights</a>
+        <a href="#skills" class="nav-link hover:text-rose-400 transition-colors">Skills</a>
+        <a href="#contact" class="nav-link hover:text-rose-400 transition-colors">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-white hover:text-rose-400 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
     </nav>
+  </header>
 
-    <header id="home"
-        class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-gray-800 min-h-[60vh] flex items-center justify-center">
-        <div class="max-w-6xl mx-auto text-center">
+  <main class="container mx-auto max-w-6xl px-6 py-8 relative z-10">
 
-            <!-- Animated Image -->
-            <div class="mb-8 relative inline-block reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                <div class="absolute -inset-4 bg-primary opacity-30 blur-2xl rounded-3xl"></div>
+    <!-- Hero Section -->
+    <section class="text-center py-0 md:py-0">
+      <div class="relative inline-block mb-6 group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-rose-600 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+        
+        <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-slate-900 overflow-hidden shadow-2xl mx-auto">
+            <img 
+              src="./images/marco.jpeg" 
+              alt="Marco Benedictus" 
+              class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+            >
+        </div>
+      </div>
+      <!-- Animated Gradient Header -->
+      <h1 class="text-5xl md:text-7xl font-extrabold text-gradient-animated">
+        Marco Benedictus Tirtaatmadja
+      </h1>
+      <p class="mt-4 text-lg md:text-xl text-gray-400">
+        Fullstack Web Developer • Designer • Programmer
+      </p>
+    </section>
 
-                <div class="relative w-40 h-40 rounded-3xl border-4 border-gray-700 shadow-xl overflow-hidden mx-auto">
-                    <img src="./images/marco.jpeg" alt="Profile" class="w-full h-full object-cover">
-                </div>
-            </div>
+    <!-- About Me -->
+    <section id="about" class="my-16 md:my-24">
+      <div class="glass-card rounded-2xl p-6 md:p-10">
+        <h2 class="text-3xl font-bold text-white mb-6 border-l-4 border-rose-500 pl-4">About Me</h2>
+        <div class="space-y-4 text-gray-300 text-lg">
+          <p>Salutations. I'm Marco, a Developer who specializes in FullStack development, able to create nice UIs and
+            functional Backends for websites.</p>
+          <p>Passionate in creating a healthy User experience through functionality and user friendly interfaces.</p>
+          <p>I am open to Criticism and I'm always ready to improve.</p>
+          <p>Currently Curious about Game Development.</p>
+        </div>
+      </div>
+    </section>
 
-            <!-- Animated Text -->
-            <div class="reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-100">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-                    Hi, I'm <span class="text-primary">Marco Benedictus Tirtaatmadja</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto">
-                    A Web Developer aiming to build simple, beautiful experiences for websites.
+    <!-- Highlights -->
+    <section id="highlights" class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-white inline-block border-b-4 border-rose-500 pb-2">Highlights</h2>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div
+              class="bg-slate-900 rounded-2xl overflow-hidden flex flex-col h-full border border-slate-800 shadow-xl select-none">
+              <div class="relative overflow-hidden aspect-video">
+                <img src="./images/gamesuite_openingscreen.png" alt="GameSuite Project Opening Screen"
+                  class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
+              </div>
+
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-white mb-2">GameSuite Internet Cafe</h3>
+                <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  A group project for our final in Web Development Studies.
                 </p>
-            </div>
 
-            <!-- Animated Buttons -->
-            <div class="flex flex-col sm:flex-row justify-center gap-4 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out delay-200">
-                <a href="#connect"
-                    class="px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-pink-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                    Let's Connect
-                </a>
-                <a href="#about"
-                    class="px-8 py-3 bg-gray-800 text-gray-200 font-semibold rounded-full border border-gray-700 hover:bg-gray-700 transition shadow-md">
-                    Learn More
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <section id="about" class="py-20 bg-gray-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <!-- Animated About Card -->
-            <div class="bg-gray-800 rounded-3xl p-8 md:p-12 shadow-xl border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl font-bold text-white mb-4">About Me</h2>
-                    <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
+                <div class="bg-slate-800 rounded-lg p-3 mb-6 border border-slate-700/50 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold text-xs uppercase tracking-wider">Role</span>
+                  <div class="h-4 w-px bg-slate-600"></div>
+                  <span class="text-slate-300 text-xs font-medium">Fullstack Developer and Project Lead</span>
                 </div>
 
-                <div class="prose prose-lg text-gray-300 mx-auto leading-relaxed text-center sm:text-center">
-                    <p class="mb-6">
-                        Hello! I'm a developer specializing in front-end and back-end development (in other words,
-                        Fullstack), able to turn complex problems into simple and User-Friendly interface designs,
-                        enhancing the User Experience Overall.
-                    </p>
-                    <p>
-                        Currently interested in Game Development. (I plan to Learn Godot and create my own Sprites in
-                        the future)
-                    </p>
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                  <a href="https://github.com/MarcoBenedictus/GameSuite" target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    View Code <span class="text-lg">&rarr;</span>
+                  </a>
+                  <a href="https://youtu.be/nAOw1PsY-oQ" target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    Watch Video <span class="text-lg">&rarr;</span>
+                  </a>
                 </div>
+              </div>
             </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div
+              class="bg-slate-900 rounded-2xl overflow-hidden flex flex-col h-full border border-slate-800 shadow-xl select-none">
+              <div class="relative overflow-hidden aspect-video">
+                <img src="./images/Portfolio First Project.png" alt="Portfolio v1"
+                  class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
+              </div>
+
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-white mb-2">First Portfolio Iteration</h3>
+                <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  A fun side-project, to understand posting and hosting a website through GitHub.
+                </p>
+
+                <div class="bg-slate-800 rounded-lg p-3 mb-6 border border-slate-700/50 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold text-xs uppercase tracking-wider">Role</span>
+                  <div class="h-4 w-px bg-slate-600"></div>
+                  <span class="text-slate-300 text-xs font-medium">As Myself</span>
+                </div>
+
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                  <a href="https://marcobenedictus.github.io" target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    View Website <span class="text-lg">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div
+              class="bg-slate-900 rounded-2xl overflow-hidden flex flex-col h-full border border-slate-800 shadow-xl select-none">
+              <div class="relative overflow-hidden aspect-video">
+                <img src="./images/bilingosplash.png" alt="Bilingo Splash Screen"
+                  class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-white mb-2">Bilingo App</h3>
+                <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  A Duolingo Duplicate for Mobile Programming Mid Terms.
+                </p>
+
+                <div class="bg-slate-800 rounded-lg p-3 mb-6 border border-slate-700/50 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold text-xs uppercase tracking-wider">Role</span>
+                  <div class="h-4 w-px bg-slate-600"></div>
+                  <span class="text-slate-300 text-xs font-medium">Fullstack Developer and Project Lead</span>
+                </div>
+
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                  <a href="https://github.com/MarcoBenedictus/Bilingo-Mobile-Prog-Mid-Terms/releases/tag/v1.0"
+                    target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    Download APK <span class="text-lg">&rarr;</span>
+                  </a>
+                  <a href="https://youtube.com/shorts/aUYiHjWk57M" target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    Watch Video <span class="text-lg">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <div
+              class="bg-slate-900 rounded-2xl overflow-hidden flex flex-col h-full border border-slate-800 shadow-xl select-none">
+              <div class="relative overflow-hidden aspect-video">
+                <img src="./images/loomerangsplash.png" alt="Loomerang App Splash"
+                  class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-white mb-2">Loomerang</h3>
+                <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  A Mobile app for Mobile Programming Final Terms.
+                </p>
+
+                <div class="bg-slate-800 rounded-lg p-3 mb-6 border border-slate-700/50 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold text-xs uppercase tracking-wider">Role</span>
+                  <div class="h-4 w-px bg-slate-600"></div>
+                  <span class="text-slate-300 text-xs font-medium">Fullstack Developer and Project Lead</span>
+                </div>
+
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                  <a href="https://github.com/MarcoBenedictus/loomerang/releases/tag/1.0" target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    Download APK <span class="text-lg">&rarr;</span>
+                  </a>
+                  <a href="https://youtube.com/shorts/aUYiHjWk57M" target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    Watch Video <span class="text-lg">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
+      </div>
     </section>
 
-    <div id="projects" class="bg-gray-900">
+    <!-- Videos Section -->
+    <section id="videos" class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-white inline-block border-b-4 border-rose-500 pb-2">Videos</h2>
 
-        <section class="py-16 md:py-6">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                    <h2 class="text-3xl font-bold text-white mb-4">Highlights</h2>
-                    <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div
+              class="bg-slate-900 rounded-2xl overflow-hidden flex flex-col h-full border border-slate-800 shadow-xl select-none">
+              <div class="video-wrapper aspect-video bg-black">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/nAOw1PsY-oQ"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-white mb-2">GameSuite Project Showcase</h3>
+                <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  A video showing how GameSuite works and its features.
+                </p>
+
+                <div class="bg-slate-800 rounded-lg p-3 mb-6 border border-slate-700/50 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold text-xs uppercase tracking-wider">Type</span>
+                  <div class="h-4 w-px bg-slate-600"></div>
+                  <span class="text-slate-300 text-xs font-medium">Project Demo</span>
                 </div>
 
-                <!-- Horizontal Scroll Container -->
-                <div class="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory px-4 scrollbar-hide md:justify-center">
-
-                    <div
-                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                        <img src="./images/gamesuite_openingscreen.png" alt="GameSuite Project Opening Screen"
-                            class="aspect-video w-full object-cover">
-                        <div class="p-6 flex-grow">
-                            <h3 class="text-xl font-bold text-white mb-2">GameSuite Internet Cafe Project</h3>
-                            <p class="text-gray-400 mb-4">A group project for our final in Web Development Studies.</p>
-                            <p class="text-gray-500 mb-2 text-xs uppercase tracking-wide font-semibold">
-                                Personal Contribution
-                            </p>
-                            <p class="text-gray-400 text-sm">
-                                The Fullstack Developer behind the project, implementing both the frontend UI in React
-                                and backend logic.
-                            </p>
-                        </div>
-                        <div class="p-6 pt-0 flex gap-4 mt-auto bg-gray-800/50">
-                            <a href="https://github.com/MarcoBenedictus/GameSuite" target="_blank"
-                                class="text-primary hover:text-pink-400 font-semibold flex items-center">
-                                <i class="fab fa-github mr-2"></i> View Code
-                            </a>
-                            <a href="https://youtu.be/nAOw1PsY-oQ" target="_blank"
-                                class="text-primary hover:text-pink-400 font-semibold flex items-center">
-                                <i class="fab fa-youtube mr-2"></i> Video
-                            </a>
-                        </div>
-                    </div>
-
-                    <div
-                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                        <img src="./images/Portfolio First Project.png" alt="Discord Bot"
-                            class="aspect-video w-full object-cover">
-                        <div class="p-6 flex-grow">
-                            <h3 class="text-xl font-bold text-white mb-2">First Portfolio Iteration</h3>
-                            <p class="text-gray-400 mb-4">
-                                A fun side-project, to understand posting and hosting a website through GitHub.
-                            </p>
-                        </div>
-                        <div class="p-6 pt-0 mt-auto bg-gray-800/50">
-                            <a href="https://marcobenedictus.github.io" target="_blank"
-                                class="text-primary hover:text-pink-400 font-semibold flex items-center">
-                                <i class="fas fa-globe mr-2"></i> View Website
-                            </a>
-                        </div>
-                    </div>
-
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                  <a href="https://youtu.be/nAOw1PsY-oQ" target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    Watch on YouTube <span class="text-lg">&rarr;</span>
+                  </a>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section class="py-16 md:py-16 bg-gray-900">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                    <h2 class="text-3xl font-bold text-white mb-4">Videos</h2>
-                    <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div
+              class="bg-slate-900 rounded-2xl overflow-hidden flex flex-col h-full border border-slate-800 shadow-xl select-none">
+              <div class="video-wrapper aspect-video bg-black flex justify-center items-center overflow-hidden">
+                <iframe class="w-full h-full" src="https://youtube.com/embed/aUYiHjWk57M" title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-white mb-2">Bilingo Preview</h3>
+                <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  A video showing a short Bilingo App Preview.
+                </p>
+
+                <div class="bg-slate-800 rounded-lg p-3 mb-6 border border-slate-700/50 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold text-xs uppercase tracking-wider">Type</span>
+                  <div class="h-4 w-px bg-slate-600"></div>
+                  <span class="text-slate-300 text-xs font-medium">App Demo</span>
                 </div>
 
-                <!-- Horizontal Scroll Container -->
-                <div class="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory px-4 scrollbar-hide md:justify-center">
-                    <div
-                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                        <div class="aspect-video w-full bg-black">
-                            <iframe class="w-full h-full" src="https://youtube.com/embed/nAOw1PsY-oQ"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">GameSuite Project Showcase</h3>
-                            <p class="text-gray-400 mb-4">A video showing how GameSuite works and its features.</p>
-                            <a href="https://youtu.be/nAOw1PsY-oQ" target="_blank"
-                                class="text-primary hover:text-pink-400 font-medium">Watch on YouTube &rarr;</a>
-                        </div>
-                    </div>
-
-                    <div
-                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col w-full md:w-[480px] border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                        <div class="aspect-video w-full bg-black">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/aUYiHjWk57M"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Bilingo Preview</h3>
-                            <p class="text-gray-400 mb-4">A video showing a short Bilingo App Preview.</p>
-                            <a href="https://youtube.com/shorts/aUYiHjWk57M" target="_blank"
-                                class="text-primary hover:text-pink-400 font-medium">Watch on YouTube &rarr;</a>
-                        </div>
-                    </div>
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                  <a href="https://youtube.com/shorts/aUYiHjWk57M" target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    Watch on YouTube <span class="text-lg">&rarr;</span>
+                  </a>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section class="pt-8 pb-8 md:pt-4 md:pb-16 bg-gray-900">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                <div class="text-center mb-12 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                    <h2 class="text-3xl font-bold text-white mb-4">Personal Projects</h2>
-                    <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
-                </div>
-
-                <!-- Horizontal Scroll Container -->
-                <div class="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory px-4 scrollbar-hide mb-16 md:justify-center">
-
-                    <div
-                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                        <img src="./images/Portfolio First Project.png" alt="First Portfolio"
-                            class="aspect-video w-full object-cover">
-                        <div class="p-6 flex-grow">
-                            <h3 class="text-lg font-bold text-white mb-2">First Portfolio Iteration</h3>
-                            <p class="text-gray-400 text-sm">
-                                A fun side-project, to understand posting and hosting a website through GitHub.
-                            </p>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <a href="https://marcobenedictus.github.io" target="_blank"
-                                class="text-primary hover:text-pink-400 font-medium text-sm">View Website &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center mb-12 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                    <h2 class="text-3xl font-bold text-white mb-4">Campus Projects</h2>
-                    <div class="w-16 h-1 bg-primary mx-auto rounded"></div>
-                </div>
-
-                <!-- Horizontal Scroll Container -->
-                <div class="flex overflow-x-auto gap-8 pb-2 snap-x snap-mandatory px-4 scrollbar-hide md:justify-center">
-
-                    <div
-                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                        <img src="./images/gamesuite_openingscreen.png" alt="GameSuite"
-                            class="aspect-video w-full object-cover">
-                        <div class="p-6 flex-grow">
-                            <h3 class="text-lg font-bold text-white mb-2">GameSuite Internet Cafe</h3>
-                            <p class="text-gray-400 text-sm mb-3">A group project for our final in Web Development
-                                Studies.</p>
-                            <div class="bg-gray-700 p-2 rounded text-xs text-blue-300">
-                                <strong>Role:</strong> Fullstack Developer and Project Lead
-                            </div>
-                        </div>
-                        <div class="p-6 pt-0 flex justify-between text-sm">
-                            <a href="https://github.com/MarcoBenedictus/GameSuite" target="_blank"
-                                class="text-primary hover:text-pink-400 font-medium">View Code</a>
-                            <a href="https://youtu.be/nAOw1PsY-oQ" target="_blank"
-                                class="text-primary hover:text-pink-400 font-medium">Watch Video</a>
-                        </div>
-                    </div>
-
-                    <div
-                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                        <img src="./images/bilingosplash.png" alt="Bilingo" class="aspect-video w-full object-cover">
-                        <div class="p-6 flex-grow">
-                            <h3 class="text-lg font-bold text-white mb-2">Bilingo App</h3>
-                            <p class="text-gray-400 text-sm mb-3">A Duolingo Duplicate for Mobile Programming Mid Terms
-                            </p>
-                            <div class="bg-gray-700 p-2 rounded text-xs text-blue-300">
-                                <strong>Role:</strong> Fullstack Developer and Project Lead
-                            </div>
-                        </div>
-                        <div class="p-6 pt-0 flex justify-between text-sm">
-                            <a href="https://github.com/MarcoBenedictus/Bilingo-Mobile-Prog-Mid-Terms/releases/tag/v1.0"
-                                target="_blank" class="text-primary hover:text-pink-400 font-medium">Download APK</a>
-                            <a href="https://youtube.com/shorts/aUYiHjWk57M" target="_blank"
-                                class="text-primary hover:text-pink-400 font-medium">Watch Video</a>
-                        </div>
-                    </div>
-
-                    <div
-                        class="flex-shrink-0 snap-center bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col w-full sm:w-80 border border-gray-700 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                        <img src="./images/loomerangsplash.png" alt="Loomerang" class="aspect-video w-full object-cover">
-                        <div class="p-6 flex-grow">
-                            <h3 class="text-lg font-bold text-white mb-2">Loomerang</h3>
-                            <p class="text-gray-400 text-sm mb-3">A Mobile app for Mobile Programming Final Terms
-                            </p>
-                            <div class="bg-gray-700 p-2 rounded text-xs text-blue-300">
-                                <strong>Role:</strong> Fullstack Developer and Project Lead
-                            </div>
-                        </div>
-                        <div class="p-6 pt-0 flex justify-between text-sm">
-                            <a href="https://github.com/MarcoBenedictus/loomerang/releases/tag/1.0"
-                                target="_blank" class="text-primary hover:text-pink-400 font-medium">Download APK</a>
-                            <a href="https://youtube.com/shorts/aUYiHjWk57M" target="_blank"
-                                class="text-primary hover:text-pink-400 font-medium">Watch Video</a>
-                        </div>
-                    </div>
-
-                </div>
-        </section>
-
-    </div>
-
-    <section id="connect" class="py-20 bg-gray-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                <h2 class="text-3xl font-bold text-white mb-4">Connect With Me</h2>
-                <div class="w-16 h-1 bg-primary mx-auto rounded mb-4"></div>
-                <p class="text-gray-400">Find me on these platforms</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-
-                <a href="https://linkedin.com/in/marcobenedictus" target="_blank"
-                    class="bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border-t-4 border-[#0077b5] group reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                    <div class="flex flex-col items-center text-center">
-                        <div
-                            class="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mb-4 group-hover:bg-gray-600 transition-colors">
-                            <i class="fab fa-linkedin text-3xl text-[#0077b5]"></i>
-                        </div>
-                        <h3 class="font-bold text-xl text-white mb-2">LinkedIn</h3>
-                        <p class="text-gray-400 text-sm">Networks</p>
-                    </div>
-                </a>
-
-                <a href="https://github.com/MarcoBenedictus" target="_blank"
-                    class="bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border-t-4 border-gray-400 group reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                    <div class="flex flex-col items-center text-center">
-                        <div
-                            class="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mb-4 group-hover:bg-gray-600 transition-colors">
-                            <i class="fab fa-github text-3xl text-gray-100"></i>
-                        </div>
-                        <h3 class="font-bold text-xl text-white mb-2">GitHub</h3>
-                        <p class="text-gray-400 text-sm">Code repositories & projects</p>
-                    </div>
-                </a>
-
-                <a href="https://instagram.com/marcbenedicts" target="_blank"
-                    class="bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border-t-4 border-[#E1306C] group reveal opacity-0 translate-y-10 scale-95 transition-all duration-700 ease-out">
-                    <div class="flex flex-col items-center text-center">
-                        <div
-                            class="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mb-4 group-hover:bg-gray-600 transition-colors">
-                            <i class="fab fa-instagram text-3xl text-[#E1306C]"></i>
-                        </div>
-                        <h3 class="font-bold text-xl text-white mb-2">Instagram</h3>
-                        <p class="text-gray-400 text-sm">Daily life</p>
-                    </div>
-                </a>
-            </div>
         </div>
+      </div>
     </section>
 
-    <footer class="bg-black text-white py-8 border-t border-gray-800">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="mb-4 text-gray-400">&copy; Marco Benedictus.</p>
-            <div class="flex justify-center space-x-6">
-                <a href="https://linkedin.com/in/marcobenedictus" class="text-gray-400 hover:text-white transition"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/MarcoBenedictus" class="text-gray-400 hover:text-white transition"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://instagram.com/marcbenedicts" class="text-gray-400 hover:text-white transition"><i
-                        class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
+    <!-- Personal Projects Section -->
+    <section id="personal-projects" class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-white inline-block border-b-4 border-rose-500 pb-2">Personal Projects</h2>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const observerOptions = {
-                root: null,
-                // to self : edit for fade out animation when scrolling, this is the "safe zone" for the animation
-                rootMargin: '-100px 0px -100px 0px', 
-                threshold: 0.1
-            };
-    
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        // fadein
-                        entry.target.classList.remove("opacity-0", "translate-y-10", "scale-95");
-                        entry.target.classList.add("opacity-100", "translate-y-0", "scale-100");
-                    } else {
-                        // fadeout
-                        entry.target.classList.remove("opacity-100", "translate-y-0", "scale-100");
-                        entry.target.classList.add("opacity-0", "translate-y-10", "scale-95");
-                    }
-                });
-            }, observerOptions);
-    
-            const hiddenElements = document.querySelectorAll(".reveal");
-            hiddenElements.forEach((el) => observer.observe(el));
-        });
-    </script>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div
+              class="bg-slate-900 rounded-2xl overflow-hidden flex flex-col h-full border border-slate-800 shadow-xl select-none">
+              <div class="relative overflow-hidden aspect-video">
+                <img src="./images/Portfolio First Project.png" alt="Portfolio v1"
+                  class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-white mb-2">First Portfolio Iteration</h3>
+                <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  A fun side-project, to understand posting and hosting a website through GitHub.
+                </p>
+
+                <div class="bg-slate-800 rounded-lg p-3 mb-6 border border-slate-700/50 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold text-xs uppercase tracking-wider">Role</span>
+                  <div class="h-4 w-px bg-slate-600"></div>
+                  <span class="text-slate-300 text-xs font-medium">As Myself</span>
+                </div>
+
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                  <a href="https://marcobenedictus.github.io" target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    View Website <span class="text-lg">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Campus Projects Section -->
+    <section id="campus-projects" class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-white inline-block border-b-4 border-rose-500 pb-2">Campus Projects</h2>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div
+              class="bg-slate-900 rounded-2xl overflow-hidden flex flex-col h-full border border-slate-800 shadow-xl select-none">
+              <div class="relative overflow-hidden aspect-video">
+                <img src="./images/gamesuite_openingscreen.png" alt="GameSuite Project Opening Screen"
+                  class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-white mb-2">GameSuite Internet Cafe</h3>
+                <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  A group project for our final in Web Development Studies.
+                </p>
+
+                <div class="bg-slate-800 rounded-lg p-3 mb-6 border border-slate-700/50 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold text-xs uppercase tracking-wider">Role</span>
+                  <div class="h-4 w-px bg-slate-600"></div>
+                  <span class="text-slate-300 text-xs font-medium">Fullstack Developer and Project Lead</span>
+                </div>
+
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                  <a href="https://github.com/MarcoBenedictus/GameSuite" target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    View Code <span class="text-lg">&rarr;</span>
+                  </a>
+                  <a href="https://youtu.be/nAOw1PsY-oQ" target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    Watch Video <span class="text-lg">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div
+              class="bg-slate-900 rounded-2xl overflow-hidden flex flex-col h-full border border-slate-800 shadow-xl select-none">
+              <div class="relative overflow-hidden aspect-video">
+                <img src="./images/bilingosplash.png" alt="Bilingo Splash Screen"
+                  class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-white mb-2">Bilingo App</h3>
+                <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  A Duolingo Duplicate for Mobile Programming Mid Terms.
+                </p>
+
+                <div class="bg-slate-800 rounded-lg p-3 mb-6 border border-slate-700/50 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold text-xs uppercase tracking-wider">Role</span>
+                  <div class="h-4 w-px bg-slate-600"></div>
+                  <span class="text-slate-300 text-xs font-medium">Fullstack Developer and Project Lead</span>
+                </div>
+
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                  <a href="https://github.com/MarcoBenedictus/Bilingo-Mobile-Prog-Mid-Terms/releases/tag/v1.0"
+                    target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    Download APK <span class="text-lg">&rarr;</span>
+                  </a>
+                  <a href="https://youtube.com/shorts/aUYiHjWk57M" target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    Watch Video <span class="text-lg">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div
+              class="bg-slate-900 rounded-2xl overflow-hidden flex flex-col h-full border border-slate-800 shadow-xl select-none">
+              <div class="relative overflow-hidden aspect-video">
+                <img src="./images/loomerangsplash.png" alt="Loomerang App Splash"
+                  class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-white mb-2">Loomerang</h3>
+                <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  A Mobile app for Mobile Programming Final Terms.
+                </p>
+
+                <div class="bg-slate-800 rounded-lg p-3 mb-6 border border-slate-700/50 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold text-xs uppercase tracking-wider">Role</span>
+                  <div class="h-4 w-px bg-slate-600"></div>
+                  <span class="text-slate-300 text-xs font-medium">Fullstack Developer and Project Lead</span>
+                </div>
+
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                  <a href="https://github.com/MarcoBenedictus/loomerang/releases/tag/1.0" target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    Download APK <span class="text-lg">&rarr;</span>
+                  </a>
+                  <a href="https://youtube.com/shorts/aUYiHjWk57M" target="_blank"
+                    class="text-rose-400 hover:text-white font-semibold text-sm transition-colors flex items-center gap-1">
+                    Watch Video <span class="text-lg">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="my-16 md:my-24 max-w-4xl mx-auto">
+      <div class="bg-slate-900/80 backdrop-blur-md rounded-2xl p-6 md:p-10 border border-slate-800 shadow-xl">
+        <h2 class="text-3xl font-bold text-white mb-8 border-l-4 border-rose-500 pl-4">Skills</h2>
+        <div class="flex flex-wrap gap-4">
+          <!-- Skills Badges -->
+          <span
+            class="bg-slate-800 border border-slate-700 text-gray-200 px-5 py-2.5 rounded-lg font-medium hover:bg-slate-700 hover:text-rose-400 transition-colors cursor-default">HTML</span>
+          <span
+            class="bg-slate-800 border border-slate-700 text-gray-200 px-5 py-2.5 rounded-lg font-medium hover:bg-slate-700 hover:text-rose-400 transition-colors cursor-default">CSS</span>
+          <span
+            class="bg-slate-800 border border-slate-700 text-gray-200 px-5 py-2.5 rounded-lg font-medium hover:bg-slate-700 hover:text-rose-400 transition-colors cursor-default">JavaScript</span>
+          <span
+            class="bg-slate-800 border border-slate-700 text-gray-200 px-5 py-2.5 rounded-lg font-medium hover:bg-slate-700 hover:text-rose-400 transition-colors cursor-default">React.js</span>
+          <span
+            class="bg-slate-800 border border-slate-700 text-gray-200 px-5 py-2.5 rounded-lg font-medium hover:bg-slate-700 hover:text-rose-400 transition-colors cursor-default">Node.js</span>
+          <span
+            class="bg-slate-800 border border-slate-700 text-gray-200 px-5 py-2.5 rounded-lg font-medium hover:bg-slate-700 hover:text-rose-400 transition-colors cursor-default">EJS</span>
+          <span
+            class="bg-slate-800 border border-slate-700 text-gray-200 px-5 py-2.5 rounded-lg font-medium hover:bg-slate-700 hover:text-rose-400 transition-colors cursor-default">REST API</span>
+          <span
+            class="bg-slate-800 border border-slate-700 text-gray-200 px-5 py-2.5 rounded-lg font-medium hover:bg-slate-700 hover:text-rose-400 transition-colors cursor-default">MongoDB</span>
+          <span
+            class="bg-slate-800 border border-slate-700 text-gray-200 px-5 py-2.5 rounded-lg font-medium hover:bg-slate-700 hover:text-rose-400 transition-colors cursor-default">SQL</span>
+          <span
+            class="bg-slate-800 border border-slate-700 text-gray-200 px-5 py-2.5 rounded-lg font-medium hover:bg-slate-700 hover:text-rose-400 transition-colors cursor-default">Git</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+<section id="contact" class="my-16 md:my-24 text-center">
+      <div class="max-w-2xl mx-auto p-10 bg-gradient-to-b from-slate-900 to-black rounded-3xl border border-slate-800">
+        <h2 class="text-3xl font-bold text-white mb-4">Get In Touch</h2>
+        <p class="text-lg text-gray-400 mb-8">
+          I'm open to new opportunities and collaborations. Feel free to reach out!
+        </p>
+        <div class="flex justify-center gap-8">
+          
+          <a href="https://instagram.com/marcbenedicts" target="_blank" class="group text-gray-300 hover:text-rose-400 transition-all duration-300 transform hover:-translate-y-1">
+            <svg class="w-10 h-10 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069-3.204 0-3.584-.012-4.849-.069-3.225-.149-4.771-1.664-4.919-4.919-.058-1.265-.069-1.644-.069-4.849 0-3.204.012-3.584.069-4.849.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.2-4.354-2.618-6.782-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" clip-rule="evenodd" />
+            </svg>
+          </a>
+
+          <a href="https://github.com/MarcoBenedictus" class="group text-gray-300 hover:text-rose-400 transition-all duration-300 transform hover:-translate-y-1">
+            <svg class="w-10 h-10 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.398.1 2.65.64.7 1.03 1.595 1.03 2.688 0 3.848-2.339 4.695-4.566 4.942.359.308.678.92.678 1.854 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.003 10.003 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" />
+            </svg>
+          </a>
+
+          <a href="https://www.linkedin.com/in/marcobenedictus" target="_blank" class="group text-gray-300 hover:text-rose-400 transition-all duration-300 transform hover:-translate-y-1">
+            <svg class="w-10 h-10 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.783-1.75-1.75s.784-1.75 1.75-1.75 1.75.783 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-8 border-t border-gray-800 relative z-10 bg-black text-sm">
+    <p class="text-gray-500">© Marco Benedictus T.</p>
+  </footer>
+
+  <!-- Load Swiper JS FIRST (Crucial Fix) -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Link to your new JavaScript file LAST -->
+  <script src="script.js"></script>
 
 </body>
 
